@@ -8,7 +8,6 @@
 #include <gl/glut.h>
 #include <gl/gl.h>
 
-
 //Função que mostra o plano cartesiano
 void renderCoordinateAxis(){
 	//eixo X - verde
@@ -36,7 +35,6 @@ void renderCoordinateAxis(){
 	glEnd();
 }
 
-
 //Função principal - desenha na tela
 void display(){
 	glClearColor(1, 1, 1, 0); //fundo branco
@@ -53,7 +51,19 @@ void display(){
 	glTranslatef(0.4f, 0.1f, 0.0f);
 	glutWireCube(0.2);
 
-	
+	glPushMatrix();
+		glLoadIdentity();
+		glColor3f(0.6f, 0.5f, 0.3f);
+		glTranslatef(0.4f, 0.3f, 0.0f);
+		glutWireCube(0.2);
+	glPopMatrix();
+
+	glPushMatrix();
+		glLoadIdentity();
+		glColor3f(0.3f, 0.7f, 0.2f);
+		glTranslatef(0.4f, 0.5f, 0.0f);
+		glutWireCube(0.2);
+	glPopMatrix();
 
 	glutSwapBuffers(); //atualiza a display
 }
