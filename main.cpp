@@ -46,24 +46,37 @@ void display(){
 	renderCoordinateAxis(); //Chama a fução para mostrar o plano cartesiano
 
 	glLoadIdentity(); //matriz identidade para limpar qualquer transformação que tenha ocorrido
-
+	
 	glColor3f(0.3f, 0.5f, 0.6f);
-	glTranslatef(0.4f, 0.1f, 0.0f);
-	glutWireCube(0.2);
+	glTranslatef(0.4f, 0.05f, 0.0f);
+	glutWireCube(0.1);
 
 	glPushMatrix();
 		glLoadIdentity();
 		glColor3f(0.6f, 0.5f, 0.3f);
-		glTranslatef(0.4f, 0.3f, 0.0f);
-		glutWireCube(0.2);
+		glTranslatef(0.4f, 0.15f, 0.0f);
+		glutWireCube(0.1);
 	glPopMatrix();
 
 	glPushMatrix();
 		glLoadIdentity();
 		glColor3f(0.3f, 0.7f, 0.2f);
-		glTranslatef(0.4f, 0.5f, 0.0f);
-		glutWireCube(0.2);
+		glTranslatef(0.4f, 0.25f, 0.0f);
+		glutWireCube(0.1);
 	glPopMatrix();
+
+	glPushMatrix();
+		glLoadIdentity();
+		glColor3f(0.7f, 0.0f, 0.0f);
+		glBegin(GL_POLYGON);
+			glVertex2f(0.35f, 0.3f);
+			glVertex2f(0.45f, 0.3f);
+			glVertex2f(0.45f, 0.5f);
+			glVertex2f(0.35f, 0.5f);
+		glEnd();
+	glPopMatrix();
+
+
 
 	glutSwapBuffers(); //atualiza a display
 }
