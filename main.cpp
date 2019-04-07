@@ -99,6 +99,22 @@ void keyboard(unsigned char key, int x, int y){
 		case 'a':
 			rdir += 5;
 			break;
+		case 'W':
+		case 'w':
+			resq += 5;
+			break;
+		case 'S':
+		case 's':
+			rdir += 5;
+			break;
+		case 'E':
+		case 'e':
+			resq += 5;
+			break;
+		case 'D':
+		case 'd':
+			rdir += 5;
+			break;
 	}
 
 	
