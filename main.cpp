@@ -8,10 +8,8 @@
 #include <gl/glut.h>
 #include <gl/gl.h>
 
-//rotação eixo X
-GLfloat rX = 0;
-//rotação eixo Y
-GLfloat rY = 0;
+GLfloat rdir = 0; //rotação para a direita
+GLfloat resq = 0; //rotação para a esquerda
 
 //Função que mostra o plano cartesiano
 void renderCoordinateAxis(){
@@ -81,16 +79,25 @@ void display(){
 		glEnd();
 	glPopMatrix();
 
-
-
 	glutSwapBuffers(); //atualiza a display
 }
 
 void keyboard(unsigned char key, int x, int y){
-	if (key == 27) {
-		// ESC key
-		exit(0);
+	switch(key){
+		case 'Q':
+		case 'q':
+			resq -= 5;
+			break;
+		case 'A':
+		case 'a':
+			rdir += 5;
+			break;
 	}
+
+	
+
+	// Request display update
+	glutPostRedisplay();
 }
 
 int main(int argc, char** argv){
