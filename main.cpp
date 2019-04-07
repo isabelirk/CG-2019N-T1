@@ -86,40 +86,40 @@ void display(){
 		glEnd();
 	glPopMatrix();
 
+	glFlush();
 	glutSwapBuffers(); //atualiza a display
 }
 
+//função para detecção das letras do teclado
 void keyboard(unsigned char key, int x, int y){
 	switch(key){
 		case 'Q':
 		case 'q':
-			resq -= 5;
+			resq -= 5.0;
 			break;
 		case 'A':
 		case 'a':
-			rdir += 5;
+			rdir += 5.0;
 			break;
 		case 'W':
 		case 'w':
-			resq += 5;
+			resq += 5.0;
 			break;
 		case 'S':
 		case 's':
-			rdir += 5;
+			rdir += 5.0;
 			break;
 		case 'E':
 		case 'e':
-			resq += 5;
+			resq += 5.0;
 			break;
 		case 'D':
 		case 'd':
-			rdir += 5;
+			rdir += 5.0;
 			break;
 	}
 
-	
-
-	// Request display update
+	//display update
 	glutPostRedisplay();
 }
 
