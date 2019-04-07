@@ -11,3 +11,5 @@ windows:
 a compilação foi realizada dentro do programa microsoft visual studio.
 
 Existe apenas um arquivo para compilar: main.cpp
+
+E-mail: isabelireik2@gmail.com
