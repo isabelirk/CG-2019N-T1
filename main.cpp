@@ -8,6 +8,11 @@
 #include <gl/glut.h>
 #include <gl/gl.h>
 
+//rotação eixo X
+GLfloat rX = 0;
+//rotação eixo Y
+GLfloat rY = 0;
+
 //Função que mostra o plano cartesiano
 void renderCoordinateAxis(){
 	//eixo X - verde
