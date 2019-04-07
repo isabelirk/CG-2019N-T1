@@ -1,9 +1,8 @@
-/**
- Autora: Isabeli Reik
- Disciplina: Computação gráfica
- Ano: 2019/1
+/*
+	Autora: Isabeli Reik
+	Disciplina: Computação gráfica
+	Ano: 2019/1
  */
-
 
 #include <gl/glut.h>
 #include <gl/gl.h>
@@ -103,7 +102,7 @@ void keyboard(unsigned char key, int x, int y){
 			break;
 		case 'W':
 		case 'w':
-			resq += 5.0;
+			resq -= 5.0;
 			break;
 		case 'S':
 		case 's':
@@ -111,7 +110,7 @@ void keyboard(unsigned char key, int x, int y){
 			break;
 		case 'E':
 		case 'e':
-			resq += 5.0;
+			resq -= 5.0;
 			break;
 		case 'D':
 		case 'd':
