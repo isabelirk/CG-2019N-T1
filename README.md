@@ -9,3 +9,5 @@ Matrícula: 1611100015
 Compilaçao:
 windows:
 a compilação foi realizada dentro do programa microsoft visual studio.
+
+Existe apenas um arquivo para compilar: main.cpp
