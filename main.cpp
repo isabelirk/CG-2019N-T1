@@ -46,6 +46,12 @@ void display(){
 	glTranslatef(0.4f, 0.05f, 0.0f);
 	glutWireCube(altura);
 	glRotated(angulo0, bx0, by0, bz0);
+	glPushMatrix();
+		//bloco 1
+		glColor3f(0.6f, 0.5f, 0.3f);
+		glTranslatef(0.0f, 0.10f, 0.0f);
+		glutWireCube(altura);
+		glRotated(angulo1, bx1, by1, bz1);
 
 	glutSwapBuffers(); //atualiza a display
 }
