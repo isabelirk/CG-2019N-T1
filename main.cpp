@@ -9,6 +9,12 @@
 #include <GL/gl.h>
 #include <iostream>
 
+GLint altura = 1;
+GLint bx0 = 0, by0 = 0, bz0 = 0;
+GLint bx1 = 0, by1 = 0, bz1 = 0;
+GLint bx2 = 0, by2 = 0, bz2 = 0;
+GLint angulo0 = 0, angulo1 = 0, angulo2 = 0;
+
 void renderCoordinateAxis(){ //plano cartesiano
 	//eixo x - verde
 	glColor3f(0, 1, 0);
