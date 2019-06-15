@@ -39,6 +39,7 @@ void display(){
 	glClearColor(1, 1, 1, 0); //fundo branco
 	glClear(GL_COLOR_BUFFER_BIT); //limpa a tela
 	glMatrixMode(GL_MODELVIEW); //queremos fazer alterações na matriz modelView
+	glLoadIdentity();
 	renderCoordinateAxis(); //chama a função do plano cartesiano
 
 	//bloco 1 - base
@@ -75,8 +76,9 @@ void keyboard(unsigned char key, int x, int y){
 	if (key == 27){ //fechar o programa
 		exit(0);
 	}
-	switch (key) {
-	case 'q':
+
+	switch (key){ //switch para detectar as entradas do teclado
+	case 'q': //bloco 2
 	case 'Q':
 		bz1 = 1;
 		if (angulo1 > -90)
@@ -90,7 +92,7 @@ void keyboard(unsigned char key, int x, int y){
 			angulo1 = angulo1 + 5;
 	break;
 
-	case 'w':
+	case 'w': //bloco 3
 	case 'W':
 		bz2 = 1;
 		if (angulo2 < 35)
@@ -104,7 +106,7 @@ void keyboard(unsigned char key, int x, int y){
 			angulo2 = angulo2 - 5;
 	break;
 
-	case 'e':
+	case 'e': //bloco 4
 	case 'E':
 		bz3 = 1;
 		if (angulo3 < 35)
