@@ -101,9 +101,24 @@ void keyboard(unsigned char key, int x, int y){
 	case 'S':
 		bz2 = 1;
 		if (angulo2 >- 35)
-			angulo2 = angulo2 + 5;
+			angulo2 = angulo2 - 5;
+	break;
+
+	case 'e':
+	case 'E':
+		bz3 = 1;
+		if (angulo3 < 35)
+			angulo3 = angulo3 + 5;
+	break;
+
+	case 'd':
+	case 'D':
+		bz3 = 1;
+		if (angulo3 > -35)
+			angulo3 = angulo3 - 5;
 	break;
 	}
+
 	glutPostRedisplay();
 }
 
