@@ -10,10 +10,10 @@
 #include <iostream>
 
 GLfloat altura = 0.1;
-GLint bx0 = 0, by0 = 0, bz0 = 0;
 GLint bx1 = 0, by1 = 0, bz1 = 0;
 GLint bx2 = 0, by2 = 0, bz2 = 0;
-GLint angulo0 = 0, angulo1 = 0, angulo2 = 0;
+GLint bx3 = 0, by3 = 0, bz3 = 0;
+GLint angulo1 = 0, angulo2 = 0, angulo3 = 0;
 
 void renderCoordinateAxis(){ //plano cartesiano
 	//eixo x - verde
@@ -45,13 +45,19 @@ void display(){
 	glColor3f(0.3f, 0.5f, 0.6f);
 	glTranslatef(0.4f, 0.05f, 0.0f);
 	glutWireCube(altura);
-	glRotated(angulo0, bx0, by0, bz0);
+	glRotated(angulo1, bx1, by1, bz1);
 	glPushMatrix();
-		//bloco 1
+		//bloco 2
 		glColor3f(0.6f, 0.5f, 0.3f);
 		glTranslatef(0.0f, 0.10f, 0.0f);
 		glutWireCube(altura);
-		glRotated(angulo1, bx1, by1, bz1);
+		glRotated(angulo2, bx2, by2, bz2);
+		glPushMatrix();
+			//bloco 3
+			glColor3f(0.3f, 0.7f, 0.2f);
+			glTranslatef(0.0f, 0.10f, 0.0f);
+			glutWireCube(altura);
+			glRotated(angulo3, bx3, by3, bz3);
 
 	glutSwapBuffers(); //atualiza a display
 }
