@@ -65,6 +65,8 @@ void display(){
 				glScalef(1.0f, 2.0f, 1.0f);
 				glutSolidCube(altura);
 			glPopMatrix();
+		glPopMatrix();
+	glPopMatrix();
 
 	glutSwapBuffers(); //atualiza a display
 }
