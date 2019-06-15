@@ -71,18 +71,40 @@ void display(){
 	glutSwapBuffers(); //atualiza a display
 }
 
-//void displayInterna() {
-	//bloco 1 - base
-	//glColor3f(0.3f, 0.5f, 0.6f);
-	//glTranslatef(0.4f, 0.05f, 0.0f);
-	//glutWireCube(0.1);
-	//glRotatef(angulo0, 0.0f, 1.0f, 0.0f);
-//}
-
 void keyboard(unsigned char key, int x, int y){
 	if (key == 27){ //fechar o programa
 		exit(0);
 	}
+	switch (key) {
+	case 'q':
+	case 'Q':
+		bz1 = 1;
+		if (angulo1 > -90)
+			angulo1 = angulo1 - 5;
+	break;
+
+	case 'a':
+	case 'A':
+		bz1 = 1;
+		if (angulo1 < 90)
+			angulo1 = angulo1 + 5;
+	break;
+
+	case 'w':
+	case 'W':
+		bz2 = 1;
+		if (angulo2 < 35)
+			angulo2 = angulo2 + 5;
+	break;
+
+	case 's':
+	case 'S':
+		bz2 = 1;
+		if (angulo2 >- 35)
+			angulo2 = angulo2 + 5;
+	break;
+	}
+	glutPostRedisplay();
 }
 
 int main(int argc, char** argv){
