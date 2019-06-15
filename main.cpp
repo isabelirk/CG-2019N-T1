@@ -9,7 +9,7 @@
 #include <GL/gl.h>
 #include <iostream>
 
-GLint altura = 1;
+GLfloat altura = 0.1;
 GLint bx0 = 0, by0 = 0, bz0 = 0;
 GLint bx1 = 0, by1 = 0, bz1 = 0;
 GLint bx2 = 0, by2 = 0, bz2 = 0;
@@ -41,9 +41,22 @@ void display(){
 	glMatrixMode(GL_MODELVIEW); //queremos fazer alterações na matriz modelView
 	renderCoordinateAxis(); //chama a função do plano cartesiano
 
+	//bloco 1 - base
+	glColor3f(0.3f, 0.5f, 0.6f);
+	glTranslatef(0.4f, 0.05f, 0.0f);
+	glutWireCube(altura);
+	glRotated(angulo0, bx0, by0, bz0);
 
 	glutSwapBuffers(); //atualiza a display
 }
+
+//void displayInterna() {
+	//bloco 1 - base
+	//glColor3f(0.3f, 0.5f, 0.6f);
+	//glTranslatef(0.4f, 0.05f, 0.0f);
+	//glutWireCube(0.1);
+	//glRotatef(angulo0, 0.0f, 1.0f, 0.0f);
+//}
 
 void keyboard(unsigned char key, int x, int y){
 	if (key == 27){ //fechar o programa
